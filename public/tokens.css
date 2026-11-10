@@ -1,0 +1,15 @@
+:root{
+  --verde:#236847;      /* principal: botones, símbolo, titulares de marca */
+  --bosque:#18251e;     /* texto y fondos oscuros */
+  --hueso:#f7f8f5;      /* fondo de páginas y papelería */
+  --menta:#e2f0e7;      /* fondos suaves y resaltados */
+  --verde-claro:#7bd09d; /* verde sobre fondo oscuro */
+  --naranja:#F27B1F;     /* solo acentos: la última capa, un precio, un botón secundario */
+  --fuente-titulos:'Outfit',system-ui,sans-serif;
+  --fuente-texto:'DM Sans',system-ui,sans-serif;
+  --radio:12px;
+}
+@font-face{font-family:'Outfit';font-weight:600;font-display:swap;src:url(fuentes/outfit-600.woff2) format('woff2')}
+@font-face{font-family:'Outfit';font-weight:700;font-display:swap;src:url(fuentes/outfit-700.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-weight:400;font-display:swap;src:url(fuentes/dm-sans-400.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-weight:500;font-display:swap;src:url(fuentes/dm-sans-500.woff2) format('woff2')}

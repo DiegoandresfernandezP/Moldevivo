@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "actualizado": "2026-11-09",
+  "productos": [
+    {"id":"ejemplo-llavero","nombre":"Llavero capibara","categoria":"Llaveros","precio":9000,"foto":"","disponible":true,"ejemplo":true,"materiales":[{"nombre":"PLA","colores":["Verde","Naranja","Negro"]}]},
+    {"id":"ejemplo-soporte","nombre":"Soporte de celular","categoria":"Utilidades","precio":18000,"foto":"","disponible":false,"ejemplo":true,"materiales":[{"nombre":"PLA","colores":["Negro","Blanco"]},{"nombre":"PETG","colores":["Negro"]}]},
+    {"id":"ejemplo-maceta","nombre":"Maceta geométrica","categoria":"Hogar","precio":25000,"foto":"","disponible":true,"ejemplo":true,"materiales":[]}
+  ]
+}

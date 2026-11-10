@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Molde Vivo | Figuras y piezas impresas en 3D a tu medida</title>
+<meta name="description" content="Figuras y piezas impresas en 3D, en el material y el color que elijas. Arma tu pedido y lo confirmamos por WhatsApp.">
+<meta name="theme-color" content="#236847">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Molde Vivo | Hecho en capas, hecho para ti.">
+<meta property="og:description" content="Figuras y piezas impresas en 3D, en el material y el color que elijas.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/favicon-180.png">
+<link rel="preload" href="fuentes/outfit-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fuentes/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#catalogo">Saltar al catálogo</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="#inicio" aria-label="Molde Vivo, inicio"><img src="img/logo-horizontal.png" alt="Molde Vivo" width="560" height="177"></a>
+    <nav aria-label="Principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como-pedir">Cómo pedir</a>
+      <a href="#videos">Videos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="band hero" aria-labelledby="h-hero">
+    <div class="wrap hero-in">
+      <div class="hero-marca">
+        <span class="m print" data-capas="14" data-acento="2" role="img" aria-label="Símbolo de Molde Vivo: una M hecha de capas"><img class="m-fallback" src="img/marca-512.png" alt=""></span>
+      </div>
+      <div class="hero-txt">
+        <h1 id="h-hero">Hecho en capas, hecho para ti.</h1>
+        <p class="lead">Figuras y piezas impresas en 3D, en el material y el color que elijas. Arma tu pedido y lo confirmamos por WhatsApp.</p>
+        <div class="acciones">
+          <a class="btn" href="#catalogo">Ver catálogo</a>
+          <a class="btn btn-sec" id="wa-hero" href="#contacto">Escribir por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalogo" class="band" aria-labelledby="h-cat">
+    <div class="wrap">
+      <h2 id="h-cat">Catálogo</h2>
+      <p id="aviso-ejemplo" class="aviso" hidden>Estamos preparando el catálogo. Estos son productos de ejemplo.</p>
+      <div id="filtros" class="filtros" role="group" aria-label="Filtrar por categoría"></div>
+      <div id="grilla" class="grilla"><p class="estado">Cargando catálogo…</p></div>
+      <noscript><p class="estado">Para ver el catálogo y armar tu pedido necesitas activar JavaScript en tu navegador.</p></noscript>
+    </div>
+  </section>
+
+  <section id="como-pedir" class="band menta" aria-labelledby="h-como">
+    <div class="wrap">
+      <h2 id="h-como">Cómo pedir</h2>
+      <ol class="pasos">
+        <li><h3>Elige tus piezas</h3><p>Escoge material, color y cantidad de cada una.</p></li>
+        <li><h3>Envía el pedido por WhatsApp</h3><p>Se abre un mensaje ya escrito con tu pedido y un código. Solo tienes que enviarlo.</p></li>
+        <li><h3>Confirmamos y pagas un anticipo</h3><p>Te confirmamos el precio final y el tiempo de entrega. Para empezar, pagas un anticipo del <span id="anticipo">50</span> % por Bre-B, con el código del pedido en la descripción.</p></li>
+        <li><h3>Imprimimos y te entregamos</h3><p>Te avisamos cuando esté lista y coordinamos la entrega y el saldo.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="videos" class="band dark" aria-labelledby="h-vid">
+    <div class="wrap">
+      <h2 id="h-vid">Videos</h2>
+      <p class="lead">Mira cómo imprimimos y cómo quedan las piezas.</p>
+      <div id="lista-videos" class="videos"></div>
+      <p class="nota">Los videos se cargan desde Instagram, TikTok o YouTube solo cuando presionas reproducir.</p>
+      <div class="acciones">
+        <a class="btn" id="vid-ig" href="#contacto" target="_blank" rel="noopener noreferrer" hidden>Instagram</a>
+        <a class="btn btn-sec" id="vid-tt" href="#contacto" target="_blank" rel="noopener noreferrer" hidden>TikTok</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="band green" aria-labelledby="h-con">
+    <div class="wrap">
+      <h2 id="h-con">¿Prefieres escribirnos directo?</h2>
+      <p class="lead">Cuéntanos qué necesitas y te respondemos por WhatsApp.</p>
+      <div class="acciones">
+        <a class="btn" id="con-wa" href="#contacto" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn btn-sec" id="con-ig" href="#contacto" target="_blank" rel="noopener noreferrer" hidden>Instagram</a>
+        <a class="btn btn-sec" id="con-tt" href="#contacto" target="_blank" rel="noopener noreferrer" hidden>TikTok</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="wrap pie-in">
+    <p>Molde Vivo. Hecho en capas, hecho para ti.</p>
+    <p><a href="privacidad.html">Política de privacidad</a></p>
+  </div>
+</footer>
+
+<dialog id="dlg-producto" aria-labelledby="dp-titulo"><div class="dlg-in" id="dp-cuerpo"></div></dialog>
+<dialog id="dlg-pedido" aria-labelledby="dpe-titulo"><div class="dlg-in" id="dpe-cuerpo"></div></dialog>
+<button id="fab" class="fab" type="button" hidden>Mi pedido <span id="fab-n" class="fab-n">0</span></button>
+<div id="estado" class="solo-lectores" role="status" aria-live="polite"></div>
+
+<script src="js/marca.js"></script>
+<script src="js/tienda.js"></script>
+</body>
+</html>
