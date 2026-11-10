@@ -1,0 +1,4 @@
+  respaldo*
+  *respaldo*.json
+  *.csv
+  .DS_Store
