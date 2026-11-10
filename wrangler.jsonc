@@ -1,6 +1,6 @@
 {
   // El nombre debe ser igual al del proyecto que crees en el panel de Cloudflare.
-  "name": "molde-vivo",
+  "name": "moldevivo",
   "compatibility_date": "2026-10-13",
   "assets": {
     "directory": "./public",
