@@ -39,12 +39,15 @@ a{color:inherit}
 @media (max-width:640px){.top-in{flex-direction:column;align-items:flex-start;gap:0;padding-top:8px}.top nav{width:100%}}
 
 /* símbolo */
-.m{position:relative;display:block;aspect-ratio:1/1;width:var(--w,120px);--c:var(--verde);--a:var(--naranja)}
+.m{position:relative;display:block;aspect-ratio:1/1;width:var(--w,120px);--c:var(--verde);--a:var(--naranja);--n:var(--bosque)}
 .m i{position:absolute;display:block;border-radius:999px;background:var(--c)}
 .m i.acento{background:var(--a)}
+.m i.boq{left:0;top:0;width:100%;height:100%;border-radius:0;background:var(--n)}
 .m-fallback{width:100%;height:100%;display:block}
 .print i{transform-origin:left center;animation:print .55s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i)*70ms + .2s)}
 @keyframes print{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+.print i.boq{transform-origin:center top;animation:boq .5s ease-out both;animation-delay:calc(var(--i)*70ms + .2s)}
+@keyframes boq{from{transform:translateY(-12%);opacity:0}to{transform:none;opacity:1}}
 @media (prefers-reduced-motion:reduce){.print i{animation:none}html{scroll-behavior:auto}}
 
 /* portada */
