@@ -14,7 +14,7 @@ Dentro de `public/`:
 - `index.html`, `privacidad.html`, `404.html`: las páginas.
 - `estilos.css` y `tokens.css`: diseño y marca.
 - `js/marca.js` y `js/tienda.js`: el símbolo animado y la lógica del catálogo y del pedido.
-- `datos/config.json`: tu WhatsApp, el porcentaje de anticipo, tus redes y los videos.
+- `datos/config.json`: tu WhatsApp, tus redes (Instagram, TikTok y YouTube) y los videos.
 - `datos/catalogo.json`: el catálogo. Trae 3 productos de ejemplo; se reemplaza con el que exporta la app.
 - `fuentes/`, `img/`: tipografías propias, logo, favicons y fotos de productos.
 - `_headers`: las cabeceras de seguridad.
@@ -57,9 +57,9 @@ En `public/datos/config.json`, dentro de `"videos"`, agrega los enlaces de las p
 
 Se aceptan Instagram (`/p/`, `/reel/`), TikTok (enlace completo de la publicación; los enlaces cortos `vm.tiktok.com` no funcionan) y YouTube. Máximo 12.
 
-## Cambiar el número de WhatsApp o el anticipo
+## Cambiar el número de WhatsApp o tus enlaces
 
-Todo está en `public/datos/config.json`. Cuando tengas un número de negocio, cambia `"whatsapp"` (con el 57 adelante y sin espacios ni signos).
+Todo está en `public/datos/config.json`. Cuando tengas un número de negocio, cambia `"whatsapp"` (con el 57 adelante y sin espacios ni signos). Tus redes (`"instagram"`, `"tiktok"` y `"youtube"`) también se cambian ahí; si dejas una vacía, su botón no aparece.
 
 ## Seguridad: lo que ya está hecho
 
