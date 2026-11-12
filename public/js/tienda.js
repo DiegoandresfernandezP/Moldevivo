@@ -10,7 +10,7 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var COP = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 });
   var CLAVE = 'mv-pedido-v1';
-  var cfg = { whatsapp: null, anticipo: 50, instagram: null, tiktok: null, videos: [] };
+  var cfg = { whatsapp: null, instagram: null, tiktok: null, youtube: null, videos: [] };
   var productos = [], porId = {}, categoria = 'Todo';
   var pedido = { codigo: null, items: [] };
 
@@ -51,9 +51,9 @@
   function limpiarConfig(raw) {
     raw = raw && typeof raw === 'object' ? raw : {};
     cfg.whatsapp = /^\d{10,15}$/.test(String(raw.whatsapp || '')) ? String(raw.whatsapp) : null;
-    cfg.anticipo = Math.round(numero(raw.anticipo, 0, 100, 50));
     cfg.instagram = urlRed(raw.instagram, ['instagram.com']);
     cfg.tiktok = urlRed(raw.tiktok, ['tiktok.com']);
+    cfg.youtube = urlRed(raw.youtube, ['youtube.com', 'm.youtube.com', 'youtu.be']);
     cfg.videos = Array.isArray(raw.videos) ? raw.videos.slice(0, 12).map(function (v) {
       return { url: texto(v && v.url, 300), titulo: texto(v && v.titulo, 80) };
     }) : [];
@@ -68,12 +68,15 @@
       var n = texto(m && m.nombre, 30);
       if (!n) return null;
       var cols = (Array.isArray(m.colores) ? m.colores : []).slice(0, 16).map(function (c) { return texto(c, 30); }).filter(Boolean);
-      return { nombre: n, colores: cols };
+      return { nombre: n, colores: cols, precio: Math.round(numero(m && m.precio, 0, 10000000, 0)) };
     }).filter(Boolean);
     return {
       id: id, nombre: nombre, categoria: texto(p.categoria, 40) || 'Otros', precio: Math.round(precio),
       foto: typeof p.foto === 'string' && /^img\/[a-z0-9._-]{1,80}\.(jpe?g|png|webp)$/i.test(p.foto) ? p.foto : '',
-      disponible: p.disponible === true, ejemplo: p.ejemplo === true, materiales: mats
+      disponible: p.disponible === true, ejemplo: p.ejemplo === true, materiales: mats,
+      disponibles: (Array.isArray(p.disponibles) ? p.disponibles : []).slice(0, 60).map(function (v) {
+        return { material: texto(v && v.material, 30), color: texto(v && v.color, 30) };
+      }).filter(function (v) { return v.material; })
     };
   }
 
@@ -110,7 +113,20 @@
     else if (pedido.items.length < 50) pedido.items.push(it);
     guardarPedido(); actualizarFab();
   }
-  function total() { return pedido.items.reduce(function (s, it) { return s + porId[it.id].precio * it.cantidad; }, 0); }
+  function precioDe(p, material) {
+    var m = p.materiales.filter(function (x) { return x.nombre === material; })[0];
+    return m && m.precio > 0 ? m.precio : p.precio;
+  }
+  function textoPrecio(p) {
+    var ps = p.materiales.length ? p.materiales.map(function (m) { return precioDe(p, m.nombre); }) : [p.precio];
+    var min = Math.min.apply(null, ps), max = Math.max.apply(null, ps);
+    return (min !== max ? 'Desde ' : '') + COP.format(min);
+  }
+  function hayExistencia(p, material, color) {
+    if (!p.disponibles.length) return p.disponible;
+    return p.disponibles.some(function (v) { return v.material === material && (!color || v.color === color); });
+  }
+  function total() { return pedido.items.reduce(function (s, it) { return s + precioDe(porId[it.id], it.material) * it.cantidad; }, 0); }
   function actualizarFab() {
     var n = pedido.items.reduce(function (s, it) { return s + it.cantidad; }, 0), f = $('#fab');
     f.hidden = n === 0; $('#fab-n').textContent = String(n);
@@ -119,7 +135,7 @@
     var l = ['Hola Molde Vivo, quiero hacer este pedido (' + pedido.codigo + '):', ''];
     pedido.items.forEach(function (it, i) {
       var p = porId[it.id], o = [it.material, it.color].filter(Boolean).join(', ');
-      l.push((i + 1) + '. ' + p.nombre + (o ? ' (' + o + ')' : '') + ', cantidad ' + it.cantidad + ', ' + COP.format(p.precio * it.cantidad));
+      l.push((i + 1) + '. ' + p.nombre + (o ? ' (' + o + ')' : '') + ', cantidad ' + it.cantidad + ', ' + COP.format(precioDe(p, it.material) * it.cantidad));
       if (it.nota) l.push('   Nota: ' + it.nota);
     });
     l.push('', 'Total estimado: ' + COP.format(total()), '¿Me confirmas el precio final y el tiempo de entrega?');
@@ -149,7 +165,7 @@
     return h('article', { class: 'tarjeta' }, [media, h('div', { class: 'tarjeta-in' }, [
       h('h3', { text: p.nombre }),
       h('p', { class: 'cat', text: p.categoria }),
-      h('p', { class: 'precio', text: COP.format(p.precio) }),
+      h('p', { class: 'precio', text: textoPrecio(p) }),
       h('span', { class: 'etiqueta' + (p.disponible ? ' ok' : ''), text: p.disponible ? 'Disponible' : 'A pedido' }),
       btn
     ])]);
@@ -164,26 +180,35 @@
   /* ---------- ventana de opciones de un producto ---------- */
   function abrirProducto(p) {
     var cuerpo = $('#dp-cuerpo'), dlg = $('#dlg-producto'), selMat = null, selCol = null, colWrap = h('div');
+    var precioEl = h('p', { class: 'precio', text: '' }), dispEl = h('p', { class: 'aclara', text: '' });
     vaciar(cuerpo);
+    function actual() {
+      var mat = selMat ? selMat.value : '', col = selCol ? selCol.value : '';
+      precioEl.textContent = COP.format(precioDe(p, mat));
+      dispEl.textContent = hayExistencia(p, mat, col) ? 'Disponible ahora.' : 'Se imprime a pedido. Te confirmamos el tiempo de entrega por WhatsApp.';
+    }
     function pintarColores() {
       vaciar(colWrap);
       var mat = p.materiales.length ? p.materiales[selMat ? selMat.selectedIndex : 0] : null;
       if (mat && mat.colores.length) {
         selCol = h('select', { id: 'dp-col' }, mat.colores.map(function (c) { return h('option', { value: c, text: c }); }));
+        selCol.addEventListener('change', actual);
         colWrap.appendChild(h('div', { class: 'campo' }, [h('label', { for: 'dp-col', text: 'Color' }), selCol]));
       } else {
         selCol = null;
         colWrap.appendChild(h('p', { class: 'aclara', text: p.materiales.length ? 'El color lo definimos contigo por WhatsApp.' : 'El material y el color los definimos contigo por WhatsApp.' }));
       }
+      actual();
     }
     cuerpo.appendChild(h('h3', { id: 'dp-titulo', text: p.nombre }));
-    cuerpo.appendChild(h('p', { class: 'precio', text: COP.format(p.precio) }));
+    cuerpo.appendChild(precioEl);
     if (p.materiales.length) {
       selMat = h('select', { id: 'dp-mat' }, p.materiales.map(function (m) { return h('option', { value: m.nombre, text: m.nombre }); }));
       selMat.addEventListener('change', pintarColores);
       cuerpo.appendChild(h('div', { class: 'campo' }, [h('label', { for: 'dp-mat', text: 'Material' }), selMat]));
     }
     cuerpo.appendChild(colWrap); pintarColores();
+    cuerpo.appendChild(dispEl);
     var cant = h('input', { id: 'dp-cant', type: 'number', inputmode: 'numeric', min: '1', max: '99', value: '1' });
     var nota = h('textarea', { id: 'dp-nota', maxlength: '200', placeholder: 'Por ejemplo: para quién es o la fecha en que lo necesitas' });
     cuerpo.appendChild(h('div', { class: 'campo' }, [h('label', { for: 'dp-cant', text: 'Cantidad' }), cant]));
@@ -222,13 +247,13 @@
       c.appendChild(h('div', { class: 'item' }, [
         h('div', { class: 'item-top' }, [
           h('span', {}, [p.nombre, det ? h('small', { text: det }) : null, it.nota ? h('small', { text: 'Nota: ' + it.nota }) : null]),
-          h('span', { text: COP.format(p.precio * it.cantidad) })
+          h('span', { text: COP.format(precioDe(p, it.material) * it.cantidad) })
         ]),
         h('div', { class: 'cant' }, [menos, h('output', { text: String(it.cantidad) }), mas, quitar])
       ]));
     });
     c.appendChild(h('div', { class: 'total' }, [h('span', { text: 'Total estimado' }), h('span', { text: COP.format(total()) })]));
-    c.appendChild(h('p', { class: 'aclara', text: 'Te confirmamos el precio final y el tiempo de entrega por WhatsApp.' + (cfg.anticipo ? ' Para empezar se paga un anticipo del ' + cfg.anticipo + ' %.' : '') }));
+    c.appendChild(h('p', { class: 'aclara', text: 'Te confirmamos el precio final y el tiempo de entrega por WhatsApp.' }));
     var enlace = cfg.whatsapp ? enlaceWA(mensaje()) : null;
     if (enlace && enlace.length > 1900) {
       c.appendChild(h('p', { class: 'aclara', text: 'Tu pedido es muy largo para un solo mensaje. Quita algunas piezas y envíalas en otro pedido.' }));
@@ -302,9 +327,8 @@
     var wa = cfg.whatsapp ? enlaceWA('Hola Molde Vivo, quiero hacer una consulta.') : null;
     if (wa) { $('#wa-hero').href = wa; $('#wa-hero').target = '_blank'; $('#wa-hero').rel = 'noopener noreferrer'; $('#con-wa').href = wa; }
     else { $('#wa-hero').hidden = true; $('#con-wa').hidden = true; }
-    enlace('#vid-ig', cfg.instagram, 'Ver en Instagram'); enlace('#vid-tt', cfg.tiktok, 'Ver en TikTok');
-    enlace('#con-ig', cfg.instagram, 'Instagram'); enlace('#con-tt', cfg.tiktok, 'TikTok');
-    $('#anticipo').textContent = String(cfg.anticipo);
+    enlace('#vid-ig', cfg.instagram, 'Ver en Instagram'); enlace('#vid-tt', cfg.tiktok, 'Ver en TikTok'); enlace('#vid-yt', cfg.youtube, 'Ver en YouTube');
+    enlace('#con-ig', cfg.instagram, 'Instagram'); enlace('#con-tt', cfg.tiktok, 'TikTok'); enlace('#con-yt', cfg.youtube, 'YouTube');
     renderVideos();
   }
   function cargarJSON(url) {
