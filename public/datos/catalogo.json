@@ -1,9 +1,71 @@
 {
-  "version": 1,
+  "version": 3,
   "actualizado": "2026-11-09",
   "productos": [
-    {"id":"ejemplo-llavero","nombre":"Llavero capibara","categoria":"Llaveros","precio":9000,"foto":"","disponible":true,"ejemplo":true,"materiales":[{"nombre":"PLA","colores":["Verde","Naranja","Negro"]}]},
-    {"id":"ejemplo-soporte","nombre":"Soporte de celular","categoria":"Utilidades","precio":18000,"foto":"","disponible":false,"ejemplo":true,"materiales":[{"nombre":"PLA","colores":["Negro","Blanco"]},{"nombre":"PETG","colores":["Negro"]}]},
-    {"id":"ejemplo-maceta","nombre":"Maceta geométrica","categoria":"Hogar","precio":25000,"foto":"","disponible":true,"ejemplo":true,"materiales":[]}
+    {
+      "id": "ejemplo-llavero",
+      "nombre": "Llavero capibara",
+      "categoria": "Llaveros",
+      "precio": 9000,
+      "foto": "",
+      "disponible": true,
+      "ejemplo": true,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Verde",
+            "Naranja",
+            "Negro"
+          ]
+        }
+      ],
+      "fotos": [],
+      "video": "",
+      "descripcion": "Llavero con forma de capibara, liviano y resistente.",
+      "medidas": "5 cm de alto"
+    },
+    {
+      "id": "ejemplo-soporte",
+      "nombre": "Soporte de celular",
+      "categoria": "Utilidades",
+      "precio": 18000,
+      "foto": "",
+      "disponible": false,
+      "ejemplo": true,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Negro",
+            "Blanco"
+          ]
+        },
+        {
+          "nombre": "PETG",
+          "colores": [
+            "Negro"
+          ]
+        }
+      ],
+      "fotos": [],
+      "video": "",
+      "descripcion": "Soporte plegable para celular, ideal para el escritorio.",
+      "medidas": "10 cm de ancho"
+    },
+    {
+      "id": "ejemplo-maceta",
+      "nombre": "Maceta geométrica",
+      "categoria": "Hogar",
+      "precio": 25000,
+      "foto": "",
+      "disponible": true,
+      "ejemplo": true,
+      "materiales": [],
+      "fotos": [],
+      "video": "",
+      "descripcion": "Maceta geométrica para plantas pequeñas, con base para el agua.",
+      "medidas": "12 cm de alto"
+    }
   ]
 }
