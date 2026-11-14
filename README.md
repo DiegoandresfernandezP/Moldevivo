@@ -36,13 +36,32 @@ Cloudflare recomienda Workers con archivos estáticos para proyectos nuevos. Pag
 - Guarda los códigos de recuperación fuera de línea.
 - Usa un correo que solo uses para estas cuentas.
 
-## Actualizar el catálogo
+## Actualizar el catálogo (todos los días)
 
-1. En la app de gestión, entra a **Catálogo de diseños** y pulsa **Exportar para la página**. Se descarga `catalogo.json`.
-2. Reemplaza `public/datos/catalogo.json` por ese archivo y súbelo a GitHub.
-3. Para que un diseño tenga foto: copia la imagen (jpg, png o webp, liviana) a `public/img/` y, en la app, escribe su ruta en "Foto para la página pública", por ejemplo `img/dragon.jpg`.
+Los archivos de código del sitio se suben una sola vez. Lo de todos los días son solo datos y fotos.
 
-El archivo exportado solo trae nombre, categoría, precio, foto, si hay disponibilidad, material y colores. Nunca trae costos, gramos, tiempos, existencias ni márgenes.
+1. **Fotos primero.** En GitHub entra a la carpeta `public/img`, pulsa **Add file, Upload files**, arrastra las fotos y confirma.
+2. **En la app de gestión**, en el diseño, abre la sección **Ficha para la página pública**:
+   - **Fotos:** una ruta por línea, la primera es la principal, hasta 6. Por ejemplo `img/dragon-articulado-1.jpg`. El botón **Generar rutas** las arma por ti con un nombre base, la cantidad y el formato.
+   - **Video:** el enlace de la publicación de Instagram, TikTok o YouTube.
+   - **Descripción corta y medidas.**
+   - **Mostrar este diseño en la página:** desmárcalo para dejarlo oculto mientras lo preparas.
+3. En el catálogo pulsa **Exportar para la página**. Se descarga `catalogo.json` y la app te muestra qué fotos debes tener subidas y qué rutas o enlaces no fueron válidos.
+4. En GitHub entra a `public/datos`, **Add file, Upload files**, sube `catalogo.json` (reemplaza el anterior) y confirma. En un minuto queda publicado; recarga con Ctrl + F5.
+
+### Cómo nombrar las fotos
+
+- Solo letras minúsculas, números, guiones y puntos. Sin espacios, tildes ni ñ: `arbol-navidad-1.jpg`, no `Árbol Navidad 1.jpg`.
+- Termina en `.jpg`, `.jpeg`, `.png` o `.webp`.
+- Debe coincidir exactamente con la ruta de la app, porque GitHub distingue mayúsculas de minúsculas.
+- Foto horizontal 4:3, por ejemplo 1200 × 900 px, de menos de unos 300 KB. La tarjeta recorta el centro.
+- Patrón recomendado: `nombre-del-diseno-1.jpg` es la principal y `-2`, `-3`, `-4` las demás.
+
+### Categorías y colecciones
+
+La categoría es el texto del campo **Categoría** de cada diseño. Para armar una colección (por ejemplo Navidad), escribe `Navidad` en esos diseños y exporta. Los filtros solo aparecen si hay al menos dos categorías. Un diseño sin categoría aparece como "Otros".
+
+Puedes compartir un enlace que abre el catálogo ya filtrado: `https://tu-direccion/#cat=Navidad`.
 
 ## Añadir videos
 
