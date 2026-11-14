@@ -70,9 +70,13 @@
       var cols = (Array.isArray(m.colores) ? m.colores : []).slice(0, 16).map(function (c) { return texto(c, 30); }).filter(Boolean);
       return { nombre: n, colores: cols, precio: Math.round(numero(m && m.precio, 0, 10000000, 0)) };
     }).filter(Boolean);
+    var fotos = (Array.isArray(p.fotos) ? p.fotos : (p.foto ? [p.foto] : [])).slice(0, 6).filter(function (f) {
+      return typeof f === 'string' && /^img\/[a-z0-9._-]{1,80}\.(jpe?g|png|webp)$/i.test(f);
+    });
+    var video = videoDe(texto(p.video, 300)) ? texto(p.video, 300) : '';
     return {
       id: id, nombre: nombre, categoria: texto(p.categoria, 40) || 'Otros', precio: Math.round(precio),
-      foto: typeof p.foto === 'string' && /^img\/[a-z0-9._-]{1,80}\.(jpe?g|png|webp)$/i.test(p.foto) ? p.foto : '',
+      foto: fotos[0] || '', fotos: fotos, video: video, descripcion: texto(p.descripcion, 500), medidas: texto(p.medidas, 80),
       disponible: p.disponible === true, ejemplo: p.ejemplo === true, materiales: mats,
       disponibles: (Array.isArray(p.disponibles) ? p.disponibles : []).slice(0, 60).map(function (v) {
         return { material: texto(v && v.material, 30), color: texto(v && v.color, 30) };
@@ -161,6 +165,7 @@
       var m = h('span', { class: 'm', 'data-capas': '11', 'data-acento': '2', 'aria-hidden': 'true' });
       media.appendChild(m); window.MoldeVivo.dibujarMarca(m);
     }
+    if (p.video) media.appendChild(h('span', { class: 'insignia', text: 'Video' }));
     btn.addEventListener('click', function () { abrirProducto(p); });
     return h('article', { class: 'tarjeta' }, [media, h('div', { class: 'tarjeta-in' }, [
       h('h3', { text: p.nombre }),
@@ -178,8 +183,35 @@
   }
 
   /* ---------- ventana de opciones de un producto ---------- */
+  function galeria(p) {
+    var caja = h('div', { class: 'galeria' }), visor = h('div', { class: 'visor' }), tira = h('div', { class: 'tira' }), botones = [], items = [];
+    p.fotos.forEach(function (f, i) { items.push({ tipo: 'foto', src: f, alt: p.nombre + ', foto ' + (i + 1) }); });
+    var vd = p.video ? videoDe(p.video) : null;
+    if (vd) items.push({ tipo: 'video', d: vd });
+    caja.appendChild(visor);
+    if (!items.length) {
+      var m = h('span', { class: 'm', 'data-capas': '11', 'aria-hidden': 'true' });
+      visor.appendChild(m); window.MoldeVivo.dibujarMarca(m);
+      return caja;
+    }
+    function mostrar(i) {
+      vaciar(visor);
+      if (items[i].tipo === 'foto') visor.appendChild(h('img', { src: items[i].src, alt: items[i].alt, width: '800', height: '600' }));
+      else visor.appendChild(fachada({ d: items[i].d, titulo: p.nombre }));
+      botones.forEach(function (b, j) { b.setAttribute('aria-pressed', String(j === i)); });
+    }
+    items.forEach(function (it, i) {
+      var b = h('button', { type: 'button', class: 'mini', 'aria-label': it.tipo === 'foto' ? 'Ver foto ' + (i + 1) : 'Ver el video', 'aria-pressed': 'false' });
+      b.appendChild(it.tipo === 'foto' ? h('img', { src: it.src, alt: '', loading: 'lazy', width: '96', height: '72' }) : h('span', { class: 'mini-video', text: '▶ Video' }));
+      b.addEventListener('click', function () { mostrar(i); });
+      botones.push(b); tira.appendChild(b);
+    });
+    if (items.length > 1) caja.appendChild(tira);
+    mostrar(0);
+    return caja;
+  }
   function abrirProducto(p) {
-    var cuerpo = $('#dp-cuerpo'), dlg = $('#dlg-producto'), selMat = null, selCol = null, colWrap = h('div');
+    var cuerpo = $('#dp-cuerpo'), dlg = $('#dlg-producto'), info = h('div', { class: 'info' }), selMat = null, selCol = null, colWrap = h('div');
     var precioEl = h('p', { class: 'precio', text: '' }), dispEl = h('p', { class: 'aclara', text: '' });
     vaciar(cuerpo);
     function actual() {
@@ -200,27 +232,30 @@
       }
       actual();
     }
-    cuerpo.appendChild(h('h3', { id: 'dp-titulo', text: p.nombre }));
-    cuerpo.appendChild(precioEl);
+    info.appendChild(h('h3', { id: 'dp-titulo', text: p.nombre }));
+    info.appendChild(precioEl);
+    if (p.medidas) info.appendChild(h('p', { class: 'medidas', text: 'Medidas: ' + p.medidas }));
+    if (p.descripcion) info.appendChild(h('p', { class: 'desc', text: p.descripcion }));
     if (p.materiales.length) {
       selMat = h('select', { id: 'dp-mat' }, p.materiales.map(function (m) { return h('option', { value: m.nombre, text: m.nombre }); }));
       selMat.addEventListener('change', pintarColores);
-      cuerpo.appendChild(h('div', { class: 'campo' }, [h('label', { for: 'dp-mat', text: 'Material' }), selMat]));
+      info.appendChild(h('div', { class: 'campo' }, [h('label', { for: 'dp-mat', text: 'Material' }), selMat]));
     }
-    cuerpo.appendChild(colWrap); pintarColores();
-    cuerpo.appendChild(dispEl);
+    info.appendChild(colWrap); pintarColores();
+    info.appendChild(dispEl);
     var cant = h('input', { id: 'dp-cant', type: 'number', inputmode: 'numeric', min: '1', max: '99', value: '1' });
     var nota = h('textarea', { id: 'dp-nota', maxlength: '200', placeholder: 'Por ejemplo: para quién es o la fecha en que lo necesitas' });
-    cuerpo.appendChild(h('div', { class: 'campo' }, [h('label', { for: 'dp-cant', text: 'Cantidad' }), cant]));
-    cuerpo.appendChild(h('div', { class: 'campo' }, [h('label', { for: 'dp-nota', text: 'Notas (opcional)' }), nota]));
-    var cancelar = h('button', { class: 'btn btn-ghost', type: 'button', text: 'Cancelar' });
+    info.appendChild(h('div', { class: 'campo' }, [h('label', { for: 'dp-cant', text: 'Cantidad' }), cant]));
+    info.appendChild(h('div', { class: 'campo' }, [h('label', { for: 'dp-nota', text: 'Notas (opcional)' }), nota]));
+    var cancelar = h('button', { class: 'btn btn-ghost', type: 'button', text: 'Cerrar' });
     var agregar = h('button', { class: 'btn', type: 'button', text: 'Agregar al pedido' });
     cancelar.addEventListener('click', function () { cerrar(dlg); });
     agregar.addEventListener('click', function () {
       agregarItem({ id: p.id, material: selMat ? selMat.value : '', color: selCol ? selCol.value : '', nota: texto(nota.value, 200), cantidad: Math.round(numero(cant.value, 1, 99, 1)) });
       cerrar(dlg); avisar(p.nombre + ' agregado al pedido');
     });
-    cuerpo.appendChild(h('div', { class: 'fila' }, [cancelar, agregar]));
+    info.appendChild(h('div', { class: 'fila' }, [cancelar, agregar]));
+    cuerpo.appendChild(h('div', { class: 'detalle' }, [galeria(p), info]));
     abrir(dlg);
   }
 
@@ -342,7 +377,10 @@
       productos = lista.map(limpiarProducto).filter(Boolean);
       productos.forEach(function (p) { porId[p.id] = p; });
       $('#aviso-ejemplo').hidden = !productos.some(function (p) { return p.ejemplo; });
+      var mh = /^#cat=(.+)$/.exec(window.location.hash || ''), cv = '';
+      if (mh) { try { cv = decodeURIComponent(mh[1]); } catch (e) { cv = ''; } if (productos.some(function (p) { return p.categoria === cv; })) categoria = cv; }
       cargarPedido(); actualizarFab(); renderFiltros(); renderGrilla();
+      if (categoria !== 'Todo') { var secc = $('#catalogo'); if (secc && secc.scrollIntoView) secc.scrollIntoView(); }
       if (!productos.length) { vaciar($('#grilla')); $('#grilla').appendChild(h('p', { class: 'estado', text: 'Pronto tendremos productos aquí.' })); }
     });
   }
@@ -351,6 +389,7 @@
     var d = $(s);
     d.addEventListener('click', function (e) { if (e.target === d) cerrar(d); });
   });
+  $('#dlg-producto').addEventListener('close', function () { vaciar($('#dp-cuerpo')); });
   $('#fab').addEventListener('click', function () { renderPedido(); abrir($('#dlg-pedido')); });
   iniciar();
 })();
