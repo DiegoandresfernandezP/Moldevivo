@@ -1,71 +1,357 @@
 {
   "version": 3,
-  "actualizado": "2026-11-09",
+  "actualizado": "2026-11-13",
   "productos": [
     {
-      "id": "ejemplo-llavero",
-      "nombre": "Llavero capibara",
-      "categoria": "Llaveros",
-      "precio": 9000,
+      "id": "D-1792782796786",
+      "nombre": "Fantasma Anti estrés",
+      "categoria": "Anti estrés",
+      "precio": 7500,
       "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
       "disponible": true,
-      "ejemplo": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1792932528469",
+      "nombre": "llavero tortuga",
+      "categoria": "llavero",
+      "precio": 6000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1792958066230",
+      "nombre": "llavero ardilla",
+      "categoria": "llavero",
+      "precio": 6000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1792971600708",
+      "nombre": "retorcido Bumblebee",
+      "categoria": "retorcido",
+      "precio": 7500,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [
+        {
+          "nombre": "TPU",
+          "colores": []
+        }
+      ],
+      "disponibles": [
+        {
+          "material": "TPU",
+          "color": "Azul"
+        }
+      ]
+    },
+    {
+      "id": "D-1793036562374",
+      "nombre": "dragón articulado",
+      "categoria": "articulado",
+      "precio": 3500,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793077190506",
+      "nombre": "cono espiral",
+      "categoria": "fitget",
+      "precio": 6000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793077388770",
+      "nombre": "Lego grinder",
+      "categoria": "grinder",
+      "precio": 7500,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793077567973",
+      "nombre": "planetario spinner",
+      "categoria": "spinner",
+      "precio": 6000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793077637370",
+      "nombre": "giroscopio",
+      "categoria": "giroscopio",
+      "precio": 5500,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793077719870",
+      "nombre": "Clicker",
+      "categoria": "Clicker",
+      "precio": 4000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793077816845",
+      "nombre": "articulado gusano",
+      "categoria": "articulado",
+      "precio": 5000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793078088178",
+      "nombre": "Gato mago",
+      "categoria": "gato",
+      "precio": 2500,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793078186666",
+      "nombre": "gato fantasma",
+      "categoria": "gato",
+      "precio": 3000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793078312903",
+      "nombre": "gato calabaza",
+      "categoria": "gato",
+      "precio": 3000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793078467189",
+      "nombre": "castor hijo articulado",
+      "categoria": "articulado",
+      "precio": 5000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": true,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793078847405",
+      "nombre": "Árbol de navidad armable",
+      "categoria": "navidad, árbol, armable",
+      "precio": 5500,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793079037304",
+      "nombre": "Casco de soldado de asalto Twisty Fidget",
+      "categoria": "Fidget",
+      "precio": 9500,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793079660448",
+      "nombre": "Esqueleto flexible de dinosaurio T-Rex",
+      "categoria": "flexible",
+      "precio": 11000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793080824630",
+      "nombre": "esqueleto articulado",
+      "categoria": "articulado",
+      "precio": 4000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [],
+      "disponibles": []
+    },
+    {
+      "id": "D-1793104492927",
+      "nombre": "llavero gato",
+      "categoria": "llavero",
+      "precio": 6000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
       "materiales": [
         {
           "nombre": "PLA",
           "colores": [
-            "Verde",
-            "Naranja",
-            "Negro"
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
           ]
         }
       ],
-      "fotos": [],
-      "video": "",
-      "descripcion": "Llavero con forma de capibara, liviano y resistente.",
-      "medidas": "5 cm de alto"
+      "disponibles": []
     },
     {
-      "id": "ejemplo-soporte",
-      "nombre": "Soporte de celular",
-      "categoria": "Utilidades",
-      "precio": 18000,
-      "foto": "",
-      "disponible": false,
-      "ejemplo": true,
+      "id": "D-1794625612959",
+      "nombre": "pesebre-costura",
+      "categoria": "navidad, árbol, armable",
+      "precio": 153000,
+      "foto": "img/pesebre-costura-1.jpg",
+      "fotos": [
+        "img/pesebre-costura-1.jpg"
+      ],
+      "video": "",
+      "descripcion": "Hermoso pesebre tipo costura, incluye José, María , el bebe, tres reyes magos, el establo, el burro, el buey, las ovejas.",
+      "medidas": "promedio 8 cm de alto en figuras humanas, 12 de alto establo",
+      "disponible": true,
       "materiales": [
         {
           "nombre": "PLA",
           "colores": [
-            "Negro",
-            "Blanco"
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
           ]
         },
         {
-          "nombre": "PETG",
-          "colores": [
-            "Negro"
-          ]
+          "nombre": "ABS",
+          "colores": []
         }
       ],
-      "fotos": [],
-      "video": "",
-      "descripcion": "Soporte plegable para celular, ideal para el escritorio.",
-      "medidas": "10 cm de ancho"
-    },
-    {
-      "id": "ejemplo-maceta",
-      "nombre": "Maceta geométrica",
-      "categoria": "Hogar",
-      "precio": 25000,
-      "foto": "",
-      "disponible": true,
-      "ejemplo": true,
-      "materiales": [],
-      "fotos": [],
-      "video": "",
-      "descripcion": "Maceta geométrica para plantas pequeñas, con base para el agua.",
-      "medidas": "12 cm de alto"
+      "disponibles": [
+        {
+          "material": "PLA",
+          "color": "beige"
+        }
+      ]
     }
   ]
 }
