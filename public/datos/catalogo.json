@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "actualizado": "2026-11-13",
+  "actualizado": "2026-11-14",
   "productos": [
     {
       "id": "D-1792782796786",
@@ -13,7 +13,25 @@
       "descripcion": "",
       "medidas": "",
       "disponible": true,
-      "materiales": [],
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
       "disponibles": []
     },
     {
@@ -315,12 +333,12 @@
       "nombre": "pesebre-costura",
       "categoria": "navidad, árbol, armable",
       "precio": 153000,
-      "foto": "img/pesebre-costura-completo-1-1.webp",
+      "foto": "img/pesebre-con-acabado-de-costura-1.webp",
       "fotos": [
-        "img/pesebre-costura-completo-1-1.webp",
-        "img/pesebre-costura-completo-1-2.webp",
-        "img/pesebre-costura-completo-1-3.webp",
-        "img/pesebre-costura-completo-1-4.webp"
+        "img/pesebre-con-acabado-de-costura-1.webp",
+        "img/pesebre-con-acabado-de-costura-2.webp",
+        "img/pesebre-con-acabado-de-costura-3.webp",
+        "img/pesebre-con-acabado-de-costura-4.webp"
       ],
       "video": "",
       "descripcion": "Hermoso pesebre tipo costura, incluye José, María , el bebe, tres reyes magos, el establo, el burro, el buey, las ovejas.",
