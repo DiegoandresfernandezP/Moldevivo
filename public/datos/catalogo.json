@@ -309,49 +309,6 @@
         }
       ],
       "disponibles": []
-    },
-    {
-      "id": "D-1794625612959",
-      "nombre": "pesebre-costura",
-      "categoria": "navidad, árbol, armable",
-      "precio": 153000,
-      "foto": "img/pesebre-costura-1.jpg",
-      "fotos": [
-        "img/pesebre-costura-1.jpg"
-      ],
-      "video": "",
-      "descripcion": "Hermoso pesebre tipo costura, incluye José, María , el bebe, tres reyes magos, el establo, el burro, el buey, las ovejas.",
-      "medidas": "promedio 8 cm de alto en figuras humanas, 12 de alto establo",
-      "disponible": true,
-      "materiales": [
-        {
-          "nombre": "PLA",
-          "colores": [
-            "Pupura",
-            "verde",
-            "Rojo",
-            "Azul",
-            "beige",
-            "café",
-            "blue luminos",
-            "negro",
-            "madera",
-            "gris",
-            "azul",
-            "amarillo"
-          ]
-        },
-        {
-          "nombre": "ABS",
-          "colores": []
-        }
-      ],
-      "disponibles": [
-        {
-          "material": "PLA",
-          "color": "beige"
-        }
-      ]
     }
   ]
 }
