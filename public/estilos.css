@@ -65,7 +65,7 @@ a{color:inherit}
 .grilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
 .estado{color:#4b5a51}
 .tarjeta{background:#fff;border:1px solid #dfe5dc;border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column}
-.media{aspect-ratio:4/3;display:grid;place-items:center;background:repeating-linear-gradient(0deg,var(--menta) 0 9px,#f3f8f4 9px 13px)}
+.media{position:relative;aspect-ratio:4/3;display:grid;place-items:center;background:repeating-linear-gradient(0deg,var(--menta) 0 9px,#f3f8f4 9px 13px)}
 .media img{width:100%;height:100%;object-fit:cover;display:block}
 .media .m{--w:34%}
 .tarjeta-in{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
@@ -125,3 +125,22 @@ textarea{min-height:84px;resize:vertical}
 .prosa h1{font-size:clamp(32px,5vw,48px);margin-bottom:.4em}
 .prosa h2{font-size:24px;margin:1.6em 0 .4em}
 .prosa ul{padding-left:1.2em}
+
+/* ficha del producto */
+.insignia{position:absolute;top:10px;right:10px;background:var(--naranja);color:var(--bosque);font:600 12px var(--fuente-texto);padding:4px 10px;border-radius:999px}
+#dlg-producto{width:min(920px,calc(100% - 24px))}
+.detalle{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:760px){.detalle{grid-template-columns:1fr}}
+.info{display:grid;gap:12px;align-content:start}
+.info .medidas{font-weight:500;margin:0}.info .desc{margin:0;color:#3d4d44}
+.galeria{display:grid;gap:10px}
+.visor{aspect-ratio:4/3;border-radius:var(--radio);overflow:hidden;display:grid;place-items:center;background:repeating-linear-gradient(0deg,var(--menta) 0 9px,#f3f8f4 9px 13px)}
+.visor img{width:100%;height:100%;object-fit:contain;display:block;background:#f3f8f4}
+.visor .m{--w:34%}
+.visor .video{height:100%;width:auto;max-width:100%;aspect-ratio:9/16;border-radius:0}
+.tira{display:flex;gap:8px;flex-wrap:wrap}
+.mini{width:72px;height:54px;padding:0;border:2px solid #b9c2b6;border-radius:8px;overflow:hidden;background:#fff;cursor:pointer;display:grid;place-items:center}
+.mini img{width:100%;height:100%;object-fit:cover;display:block}
+.mini[aria-pressed="true"]{border-color:var(--verde);outline:2px solid var(--verde);outline-offset:1px}
+.mini-video{font:600 12px var(--fuente-texto);color:var(--bosque)}
+
