@@ -1,0 +1,10 @@
+{
+  // El nombre debe ser igual al del proyecto que crees en el panel de Cloudflare.
+  "name": "moldevivo",
+  "compatibility_date": "2026-10-13",
+  "preview_urls": false,
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}
