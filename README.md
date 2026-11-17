@@ -63,6 +63,15 @@ La categoría es el texto del campo **Categoría** de cada diseño. Para armar u
 
 Puedes compartir un enlace que abre el catálogo ya filtrado: `https://tu-direccion/#cat=Navidad`.
 
+## Compartir el catálogo por WhatsApp y redes
+
+- **Enlace de la tienda:** al pegarlo en WhatsApp o Instagram sale como tarjeta, con la imagen `public/img/compartir.jpg`, un título y una descripción. WhatsApp pide que esa imagen pese menos de unos 300 KB y la guarda en memoria un tiempo, así que si la cambias puede tardar en actualizarse.
+- **Enlace de una colección:** `https://tu-direccion/#cat=Navidad` abre la tienda ya filtrada. La categoría debe escribirse **exactamente** igual que en la app, con mayúscula y sin tildes de más.
+- **Enlace de un producto:** al abrir un producto, la dirección del navegador cambia a `#p=...`. Ese enlace abre directo su ficha. En la ficha hay un botón **Compartir** y otro **Enviar por WhatsApp**.
+- **Catálogo en PDF:** abre `https://tu-direccion/catalogo.html` (o el enlace "Descargar este catálogo en PDF" de la tienda), elige la colección y pulsa **Guardar como PDF**. Por defecto incluye solo los diseños con foto. Usa siempre el catálogo más reciente. Para una colección concreta: `catalogo.html#cat=Navidad`.
+
+Si algún día cambias de dirección (por ejemplo, con un dominio propio), actualiza en `public/index.html` las etiquetas `og:url` y `og:image`, que llevan la dirección completa.
+
 ## Añadir videos
 
 En `public/datos/config.json`, dentro de `"videos"`, agrega los enlaces de las publicaciones (no del perfil):
