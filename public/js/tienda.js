@@ -117,6 +117,25 @@
     else if (pedido.items.length < 50) pedido.items.push(it);
     guardarPedido(); actualizarFab();
   }
+  /* Enlaces que se pueden compartir: #cat=Navidad abre una colección y #p=id abre un producto. */
+  function hashCategoria() { return categoria === 'Todo' ? '' : '#cat=' + encodeURIComponent(categoria); }
+  function fijarHash(h0) { try { window.history.replaceState(null, '', window.location.pathname + window.location.search + h0); } catch (e) { /* sin historial */ } }
+  function aplicarHash() {
+    var h0 = window.location.hash || '', mc = /^#cat=(.+)$/.exec(h0), mp = /^#p=([\w-]{1,40})$/.exec(h0), v = '';
+    if (mc) {
+      try { v = decodeURIComponent(mc[1]); } catch (e) { v = ''; }
+      if (productos.some(function (p) { return p.categoria === v; })) {
+        categoria = v; renderFiltros(); renderGrilla();
+        var sec = $('#catalogo'); if (sec && sec.scrollIntoView) sec.scrollIntoView();
+      }
+    } else if (mp && porId[mp[1]]) { abrirProducto(porId[mp[1]]); }
+  }
+  function compartir(txt, url, boton) {
+    if (navigator.share) { navigator.share({ title: 'Molde Vivo', text: txt, url: url }).catch(function () { /* el usuario canceló */ }); return; }
+    var aviso = function (t) { var antes = boton.textContent; boton.textContent = t; setTimeout(function () { boton.textContent = antes; }, 2200); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(function () { aviso('Enlace copiado'); }, function () { aviso('Copia la dirección del navegador'); });
+    else aviso('Copia la dirección del navegador');
+  }
   function precioDe(p, material) {
     var m = p.materiales.filter(function (x) { return x.nombre === material; })[0];
     return m && m.precio > 0 ? m.precio : p.precio;
@@ -154,7 +173,7 @@
     cont.hidden = cats.length <= 2;
     cats.forEach(function (c) {
       var b = h('button', { class: 'chip', type: 'button', 'aria-pressed': String(c === categoria), text: c });
-      b.addEventListener('click', function () { categoria = c; renderFiltros(); renderGrilla(); });
+      b.addEventListener('click', function () { categoria = c; fijarHash(hashCategoria()); renderFiltros(); renderGrilla(); });
       cont.appendChild(b);
     });
   }
@@ -178,6 +197,7 @@
   function renderGrilla() {
     var g = $('#grilla'), lista = productos.filter(function (p) { return categoria === 'Todo' || p.categoria === categoria; });
     vaciar(g);
+    var pdf = $('#lnk-pdf'); if (pdf) pdf.href = 'catalogo.html' + hashCategoria();
     if (!lista.length) { g.appendChild(h('p', { class: 'estado', text: 'No hay productos en esta categoría.' })); return; }
     lista.forEach(function (p) { g.appendChild(tarjeta(p)); });
   }
@@ -212,6 +232,7 @@
   }
   function abrirProducto(p) {
     var cuerpo = $('#dp-cuerpo'), dlg = $('#dlg-producto'), info = h('div', { class: 'info' }), selMat = null, selCol = null, colWrap = h('div');
+    fijarHash('#p=' + p.id);
     var precioEl = h('p', { class: 'precio', text: '' }), dispEl = h('p', { class: 'aclara', text: '' });
     vaciar(cuerpo);
     function actual() {
@@ -255,6 +276,10 @@
       cerrar(dlg); avisar(p.nombre + ' agregado al pedido');
     });
     info.appendChild(h('div', { class: 'fila' }, [cancelar, agregar]));
+    var urlP = window.location.origin + window.location.pathname + '#p=' + p.id, txtP = p.nombre + ' (' + textoPrecio(p) + ') en Molde Vivo';
+    var comp = h('button', { class: 'btn btn-sec', type: 'button', text: 'Compartir' });
+    comp.addEventListener('click', function () { compartir(txtP, urlP, comp); });
+    info.appendChild(h('div', { class: 'fila' }, [comp, h('a', { class: 'btn btn-sec', href: 'https://wa.me/?text=' + encodeURIComponent(txtP + ': ' + urlP), target: '_blank', rel: 'noopener noreferrer', text: 'Enviar por WhatsApp' })]));
     cuerpo.appendChild(h('div', { class: 'detalle' }, [galeria(p), info]));
     abrir(dlg);
   }
@@ -377,10 +402,7 @@
       productos = lista.map(limpiarProducto).filter(Boolean);
       productos.forEach(function (p) { porId[p.id] = p; });
       $('#aviso-ejemplo').hidden = !productos.some(function (p) { return p.ejemplo; });
-      var mh = /^#cat=(.+)$/.exec(window.location.hash || ''), cv = '';
-      if (mh) { try { cv = decodeURIComponent(mh[1]); } catch (e) { cv = ''; } if (productos.some(function (p) { return p.categoria === cv; })) categoria = cv; }
-      cargarPedido(); actualizarFab(); renderFiltros(); renderGrilla();
-      if (categoria !== 'Todo') { var secc = $('#catalogo'); if (secc && secc.scrollIntoView) secc.scrollIntoView(); }
+      cargarPedido(); actualizarFab(); renderFiltros(); renderGrilla(); aplicarHash();
       if (!productos.length) { vaciar($('#grilla')); $('#grilla').appendChild(h('p', { class: 'estado', text: 'Pronto tendremos productos aquí.' })); }
     });
   }
@@ -389,7 +411,8 @@
     var d = $(s);
     d.addEventListener('click', function (e) { if (e.target === d) cerrar(d); });
   });
-  $('#dlg-producto').addEventListener('close', function () { vaciar($('#dp-cuerpo')); });
+  $('#dlg-producto').addEventListener('close', function () { vaciar($('#dp-cuerpo')); fijarHash(hashCategoria()); });
+  window.addEventListener('hashchange', aplicarHash);
   $('#fab').addEventListener('click', function () { renderPedido(); abrir($('#dlg-pedido')); });
   iniciar();
 })();
