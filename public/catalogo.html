@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catálogo en PDF | Molde Vivo</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#236847">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="catalogo.css">
+</head>
+<body class="cat-pdf">
+<section class="controles">
+  <div class="controles-in">
+    <h1>Catálogo en PDF</h1>
+    <p>Elige qué incluir y pulsa el botón. En la ventana de impresión escoge <b>Guardar como PDF</b>, tamaño A4, y activa <b>Gráficos de fondo</b> si tu navegador lo ofrece.</p>
+    <div class="ctl-fila">
+      <label>Colección<select id="sel-cat"></select></label>
+      <label class="marca"><input type="checkbox" id="solo-fotos" checked><span>Solo diseños con foto</span></label>
+      <button class="btn" id="imprimir" type="button">Guardar como PDF</button>
+      <a class="btn btn-sec" href="index.html">Volver a la tienda</a>
+    </div>
+    <p class="ctl-info" id="info" role="status" aria-live="polite"></p>
+  </div>
+</section>
+<main class="pdf-doc" id="doc"><p class="estado">Cargando catálogo…</p></main>
+<div class="pie-pdf" id="pie"></div>
+<script src="js/marca.js"></script>
+<script src="js/catalogo.js"></script>
+</body>
+</html>
