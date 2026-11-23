@@ -102,10 +102,15 @@
       "nombre": "Tarjeta Kit de Muñeco de Nieve Navideño 5cm",
       "categoria": "navidad",
       "precio": 12000,
-      "foto": "",
-      "fotos": [],
+      "foto": "img/tarjeta-kit-de-muneco-de-nieve-navideno-5cm-1.webp",
+      "fotos": [
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-5cm-1.webp",
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-5cm-2.webp",
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-5cm-3.webp",
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-5cm-4.webp"
+      ],
       "video": "",
-      "descripcion": "img/tarjeta-kit-de-muneco-de-nieve-navideno-1.webp\nimg/tarjeta-kit-de-muneco-de-nieve-navideno-2.webp\nimg/tarjeta-kit-de-muneco-de-nieve-navideno-3.webp\nimg/tarjeta-kit-de-muneco-de-nieve-navideno-4.webp",
+      "descripcion": "",
       "medidas": "5cm",
       "disponible": false,
       "materiales": [
@@ -140,12 +145,12 @@
       "nombre": "Tarjeta Kit de Muñeco de Nieve Navideño 10CM",
       "categoria": "navidad",
       "precio": 22000,
-      "foto": "img/tarjeta-kit-de-muneco-de-nieve-navideno-1.webp",
+      "foto": "img/tarjeta-kit-de-muneco-de-nieve-navideno-10cm-1.webp",
       "fotos": [
-        "img/tarjeta-kit-de-muneco-de-nieve-navideno-1.webp",
-        "img/tarjeta-kit-de-muneco-de-nieve-navideno-2.webp",
-        "img/tarjeta-kit-de-muneco-de-nieve-navideno-3.webp",
-        "img/tarjeta-kit-de-muneco-de-nieve-navideno-4.webp"
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-10cm-1.webp",
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-10cm-2.webp",
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-10cm-3.webp",
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-10cm-4.webp"
       ],
       "video": "",
       "descripcion": "",
