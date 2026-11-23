@@ -1,353 +1,23 @@
 {
   "version": 3,
-  "actualizado": "2026-11-19",
+  "actualizado": "2026-11-22",
   "productos": [
     {
-      "id": "D-1792782796786",
-      "nombre": "Fantasma Anti estrés",
-      "categoria": "Anti estrés",
-      "precio": 7500,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [
-        {
-          "nombre": "PLA",
-          "colores": [
-            "Pupura",
-            "verde",
-            "Rojo",
-            "Azul",
-            "beige",
-            "café",
-            "blue luminos",
-            "negro",
-            "madera",
-            "gris",
-            "azul",
-            "amarillo"
-          ]
-        }
-      ],
-      "disponibles": []
-    },
-    {
-      "id": "D-1792932528469",
-      "nombre": "llavero tortuga",
-      "categoria": "llavero",
-      "precio": 6000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1792958066230",
-      "nombre": "llavero ardilla",
-      "categoria": "llavero",
-      "precio": 6000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1792971600708",
-      "nombre": "retorcido Bumblebee",
-      "categoria": "retorcido",
-      "precio": 7500,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [
-        {
-          "nombre": "TPU",
-          "colores": []
-        }
-      ],
-      "disponibles": [
-        {
-          "material": "TPU",
-          "color": "Azul"
-        }
-      ]
-    },
-    {
-      "id": "D-1793036562374",
-      "nombre": "dragón articulado",
-      "categoria": "articulado",
-      "precio": 3500,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793077190506",
-      "nombre": "cono espiral",
-      "categoria": "fitget",
-      "precio": 6000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793077388770",
-      "nombre": "Lego grinder",
-      "categoria": "grinder",
-      "precio": 7500,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793077567973",
-      "nombre": "planetario spinner",
-      "categoria": "spinner",
-      "precio": 6000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793077637370",
-      "nombre": "giroscopio",
-      "categoria": "giroscopio",
-      "precio": 5500,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793077719870",
-      "nombre": "Clicker",
-      "categoria": "Clicker",
-      "precio": 4000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793077816845",
-      "nombre": "articulado gusano",
-      "categoria": "articulado",
-      "precio": 5000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793078088178",
-      "nombre": "Gato mago",
-      "categoria": "gato",
-      "precio": 2500,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793078186666",
-      "nombre": "gato fantasma",
-      "categoria": "gato",
-      "precio": 3000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793078312903",
-      "nombre": "gato calabaza",
-      "categoria": "gato",
-      "precio": 3000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793078467189",
-      "nombre": "castor hijo articulado",
-      "categoria": "articulado",
-      "precio": 5000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": true,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793078847405",
-      "nombre": "Árbol de navidad armable",
-      "categoria": "navidad",
-      "precio": 5500,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": false,
-      "materiales": [
-        {
-          "nombre": "TPU",
-          "colores": []
-        }
-      ],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793079037304",
-      "nombre": "Casco de soldado de asalto Twisty Fidget",
-      "categoria": "Fidget",
-      "precio": 9500,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": false,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793079660448",
-      "nombre": "Esqueleto flexible de dinosaurio T-Rex",
-      "categoria": "flexible",
-      "precio": 11000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": false,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793080824630",
-      "nombre": "esqueleto articulado",
-      "categoria": "articulado",
-      "precio": 4000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": false,
-      "materiales": [],
-      "disponibles": []
-    },
-    {
-      "id": "D-1793104492927",
-      "nombre": "llavero gato",
-      "categoria": "llavero",
-      "precio": 6000,
-      "foto": "",
-      "fotos": [],
-      "video": "",
-      "descripcion": "",
-      "medidas": "",
-      "disponible": false,
-      "materiales": [
-        {
-          "nombre": "PLA",
-          "colores": [
-            "Pupura",
-            "verde",
-            "Rojo",
-            "Azul",
-            "beige",
-            "café",
-            "blue luminos",
-            "negro",
-            "madera",
-            "gris",
-            "azul",
-            "amarillo"
-          ]
-        }
-      ],
-      "disponibles": []
-    },
-    {
       "id": "D-1794625612959",
-      "nombre": "pesebre-costura",
+      "nombre": "Portal de Belén costura 6cm",
       "categoria": "navidad",
-      "precio": 153000,
-      "foto": "img/pesebre-con-acabado-de-costura-1.webp",
+      "precio": 160000,
+      "foto": "img/portal-de-belen-costura-6cm-1.webp",
       "fotos": [
-        "img/pesebre-con-acabado-de-costura-1.webp",
-        "img/pesebre-con-acabado-de-costura-2.webp",
-        "img/pesebre-con-acabado-de-costura-3.webp",
-        "img/pesebre-con-acabado-de-costura-4.webp"
+        "img/portal-de-belen-costura-6cm-1.webp",
+        "img/portal-de-belen-costura-6cm-2.webp",
+        "img/portal-de-belen-costura-6cm-3.webp",
+        "img/portal-de-belen-costura-6cm-4.webp",
+        "img/portal-de-belen-costura-6cm-5.webp"
       ],
       "video": "",
       "descripcion": "Hermoso pesebre tipo costura, incluye José, María , el bebe, tres reyes magos, el establo, el burro, el buey, las ovejas.",
-      "medidas": "promedio 8 cm de alto en figuras humanas, 12 de alto establo",
+      "medidas": "promedio 6cm de alto en figuras humanas, 12 de alto establo",
       "disponible": true,
       "materiales": [
         {
@@ -378,6 +48,1405 @@
           "color": "beige"
         }
       ]
+    },
+    {
+      "id": "D-1795140725622",
+      "nombre": "Decoración navideña para velas de té",
+      "categoria": "navidad",
+      "precio": 51000,
+      "foto": "img/decoracion-navidena-para-velas-de-te-1.webp",
+      "fotos": [
+        "img/decoracion-navidena-para-velas-de-te-1.webp",
+        "img/decoracion-navidena-para-velas-de-te-2.webp",
+        "img/decoracion-navidena-para-velas-de-te-3.webp",
+        "img/decoracion-navidena-para-velas-de-te-4.webp"
+      ],
+      "video": "",
+      "descripcion": "Cuenta con un pequeño reno feliz con una bufanda acogedora, un esponjoso árbol de Navidad y un espacio para una vela de té LED estándar.",
+      "medidas": "alto 12 cm, ancho 12cm, radio de base 6cm.",
+      "disponible": true,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        },
+        {
+          "nombre": "PLA+",
+          "colores": [
+            "Blanco"
+          ]
+        }
+      ],
+      "disponibles": [
+        {
+          "material": "PLA",
+          "color": "beige"
+        }
+      ]
+    },
+    {
+      "id": "D-1795308266835",
+      "nombre": "Tarjeta Kit de Muñeco de Nieve Navideño 5cm",
+      "categoria": "navidad",
+      "precio": 12000,
+      "foto": "",
+      "fotos": [],
+      "video": "",
+      "descripcion": "img/tarjeta-kit-de-muneco-de-nieve-navideno-1.webp\nimg/tarjeta-kit-de-muneco-de-nieve-navideno-2.webp\nimg/tarjeta-kit-de-muneco-de-nieve-navideno-3.webp\nimg/tarjeta-kit-de-muneco-de-nieve-navideno-4.webp",
+      "medidas": "5cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        },
+        {
+          "nombre": "PLA+",
+          "colores": [
+            "Blanco"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795308984106",
+      "nombre": "Tarjeta Kit de Muñeco de Nieve Navideño 10CM",
+      "categoria": "navidad",
+      "precio": 22000,
+      "foto": "img/tarjeta-kit-de-muneco-de-nieve-navideno-1.webp",
+      "fotos": [
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-1.webp",
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-2.webp",
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-3.webp",
+        "img/tarjeta-kit-de-muneco-de-nieve-navideno-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "10 cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        },
+        {
+          "nombre": "PLA+",
+          "colores": [
+            "Blanco"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795310384526",
+      "nombre": "Calendario de Adviento",
+      "categoria": "navidad",
+      "precio": 428000,
+      "foto": "img/calendario-de-adviento-1.webp",
+      "fotos": [
+        "img/calendario-de-adviento-1.webp",
+        "img/calendario-de-adviento-2.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PETG",
+          "colores": [
+            "purpura",
+            "rojo brillante"
+          ]
+        },
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        },
+        {
+          "nombre": "ABS",
+          "colores": []
+        },
+        {
+          "nombre": "PLA+",
+          "colores": [
+            "Blanco"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795311111523",
+      "nombre": "Ángel de Navidad 5cm",
+      "categoria": "navidad",
+      "precio": 16000,
+      "foto": "img/angel-de-navidad-5cm-1.webp",
+      "fotos": [
+        "img/angel-de-navidad-5cm-1.webp",
+        "img/angel-de-navidad-5cm-2.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "5cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        },
+        {
+          "nombre": "PLA+",
+          "colores": [
+            "Blanco"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795311286065",
+      "nombre": "Ángel de Navidad 8cm",
+      "categoria": "navidad",
+      "precio": 24000,
+      "foto": "img/angel-de-navidad-8cm-1.webp",
+      "fotos": [
+        "img/angel-de-navidad-8cm-1.webp",
+        "img/angel-de-navidad-8cm-2.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "8cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795312693807",
+      "nombre": "Casa KITcard de Navidad",
+      "categoria": "navidad",
+      "precio": 20000,
+      "foto": "img/casa-kitcard-de-navidad-1.webp",
+      "fotos": [
+        "img/casa-kitcard-de-navidad-1.webp",
+        "img/casa-kitcard-de-navidad-2.webp",
+        "img/casa-kitcard-de-navidad-3.webp",
+        "img/casa-kitcard-de-navidad-4.webp",
+        "img/casa-kitcard-de-navidad-5.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795313127167",
+      "nombre": "Casita de Navidad",
+      "categoria": "navidad",
+      "precio": 20000,
+      "foto": "img/casita-de-navidad-1.webp",
+      "fotos": [
+        "img/casita-de-navidad-1.webp",
+        "img/casita-de-navidad-2.webp",
+        "img/casita-de-navidad-3.webp",
+        "img/casita-de-navidad-4.webp",
+        "img/casita-de-navidad-5.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795313529448",
+      "nombre": "Christmas Bell Ornament",
+      "categoria": "navidad",
+      "precio": 20000,
+      "foto": "img/christmas-bell-ornament-1.webp",
+      "fotos": [
+        "img/christmas-bell-ornament-1.webp",
+        "img/christmas-bell-ornament-2.webp",
+        "img/christmas-bell-ornament-3.webp",
+        "img/christmas-bell-ornament-4.webp",
+        "img/christmas-bell-ornament-5.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795314067341",
+      "nombre": "christmas ornaments",
+      "categoria": "navidad",
+      "precio": 22000,
+      "foto": "img/christmas-ornaments-1.webp",
+      "fotos": [
+        "img/christmas-ornaments-1.webp",
+        "img/christmas-ornaments-2.webp",
+        "img/christmas-ornaments-3.webp",
+        "img/christmas-ornaments-4.webp",
+        "img/christmas-ornaments-5.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795314569681",
+      "nombre": "Christmas tree kitcard",
+      "categoria": "navidad",
+      "precio": 16000,
+      "foto": "img/christmas-tree-kitcard-1.webp",
+      "fotos": [
+        "img/christmas-tree-kitcard-1.webp",
+        "img/christmas-tree-kitcard-2.webp",
+        "img/christmas-tree-kitcard-3.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795314984054",
+      "nombre": "Decoración de alce navideño tejido",
+      "categoria": "navidad",
+      "precio": 16000,
+      "foto": "img/decoracion-de-alce-navideno-tejido-1.webp",
+      "fotos": [
+        "img/decoracion-de-alce-navideno-tejido-1.webp",
+        "img/decoracion-de-alce-navideno-tejido-2.webp",
+        "img/decoracion-de-alce-navideno-tejido-3.webp",
+        "img/decoracion-de-alce-navideno-tejido-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "5",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795315093939",
+      "nombre": "Decoración de alce navideño tejido 8cm",
+      "categoria": "navidad",
+      "precio": 26000,
+      "foto": "img/decoracion-de-alce-navideno-tejido-8cm-1.webp",
+      "fotos": [
+        "img/decoracion-de-alce-navideno-tejido-8cm-1.webp",
+        "img/decoracion-de-alce-navideno-tejido-8cm-2.webp",
+        "img/decoracion-de-alce-navideno-tejido-8cm-3.webp",
+        "img/decoracion-de-alce-navideno-tejido-8cm-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "8",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795380783267",
+      "nombre": "Decoración de esquina de puerta de gnomos navideños",
+      "categoria": "navidad",
+      "precio": 16000,
+      "foto": "img/decoracion-de-esquina-de-puerta-de-gnomos-navideno-1.webp",
+      "fotos": [
+        "img/decoracion-de-esquina-de-puerta-de-gnomos-navideno-1.webp",
+        "img/decoracion-de-esquina-de-puerta-de-gnomos-navideno-2.webp",
+        "img/decoracion-de-esquina-de-puerta-de-gnomos-navideno-3.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "6cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795382944008",
+      "nombre": "Decoración navideña Papa Noel 5cm",
+      "categoria": "navidad",
+      "precio": 16000,
+      "foto": "img/decoracion-navidena-papa-noel-1.webp",
+      "fotos": [
+        "img/decoracion-navidena-papa-noel-1.webp",
+        "img/decoracion-navidena-papa-noel-2.webp",
+        "img/decoracion-navidena-papa-noel-3.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "5cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795383132360",
+      "nombre": "Decoración navideña Papa Noel 8cm",
+      "categoria": "navidad",
+      "precio": 24000,
+      "foto": "img/decoracion-navidena-papa-noel-8cm-1.webp",
+      "fotos": [
+        "img/decoracion-navidena-papa-noel-8cm-1.webp",
+        "img/decoracion-navidena-papa-noel-8cm-2.webp",
+        "img/decoracion-navidena-papa-noel-8cm-3.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "8cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795384061957",
+      "nombre": "Duende navideño",
+      "categoria": "navidad",
+      "precio": 26000,
+      "foto": "img/duende-navideno-1.webp",
+      "fotos": [
+        "img/duende-navideno-1.webp",
+        "img/duende-navideno-2.webp",
+        "img/duende-navideno-3.webp",
+        "img/duende-navideno-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "10cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795387472393",
+      "nombre": "Duende navideño 2 5cm",
+      "categoria": "navidad",
+      "precio": 16000,
+      "foto": "img/duende-navideno-2-5cm-1.webp",
+      "fotos": [
+        "img/duende-navideno-2-5cm-1.webp",
+        "img/duende-navideno-2-5cm-2.webp",
+        "img/duende-navideno-2-5cm-3.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "5cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795387625437",
+      "nombre": "Duende navideño 2 8cm",
+      "categoria": "navidad",
+      "precio": 24000,
+      "foto": "img/duende-navideno-2-8cm-1.webp",
+      "fotos": [
+        "img/duende-navideno-2-8cm-1.webp",
+        "img/duende-navideno-2-8cm-2.webp",
+        "img/duende-navideno-2-8cm-3.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "8cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795389466670",
+      "nombre": "El Grinch - Tarjeta Kit Navideña",
+      "categoria": "",
+      "precio": 26000,
+      "foto": "img/el-grinch-tarjeta-kit-navidena-1.webp",
+      "fotos": [
+        "img/el-grinch-tarjeta-kit-navidena-1.webp",
+        "img/el-grinch-tarjeta-kit-navidena-2.webp",
+        "img/el-grinch-tarjeta-kit-navidena-3.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795390417568",
+      "nombre": "Encantadora casa navideña",
+      "categoria": "navidad",
+      "precio": 65000,
+      "foto": "img/encantadora-casa-navidena-1.webp",
+      "fotos": [
+        "img/encantadora-casa-navidena-1.webp",
+        "img/encantadora-casa-navidena-2.webp",
+        "img/encantadora-casa-navidena-3.webp",
+        "img/encantadora-casa-navidena-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795390763791",
+      "nombre": "Escena de Natividad tejida – Decoración navideña",
+      "categoria": "navidad",
+      "precio": 31000,
+      "foto": "img/escena-de-natividad-tejida-decoracion-navidena-1.webp",
+      "fotos": [
+        "img/escena-de-natividad-tejida-decoracion-navidena-1.webp",
+        "img/escena-de-natividad-tejida-decoracion-navidena-2.webp",
+        "img/escena-de-natividad-tejida-decoracion-navidena-3.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795391758025",
+      "nombre": "Esquina de puerta / Marco de puerta Grinch Ho Ho Ho",
+      "categoria": "",
+      "precio": 20000,
+      "foto": "img/esquina-de-puerta-marco-de-puerta-grinch-ho-ho-ho-1.webp",
+      "fotos": [
+        "img/esquina-de-puerta-marco-de-puerta-grinch-ho-ho-ho-1.webp",
+        "img/esquina-de-puerta-marco-de-puerta-grinch-ho-ho-ho-2.webp",
+        "img/esquina-de-puerta-marco-de-puerta-grinch-ho-ho-ho-3.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795392290172",
+      "nombre": "Establo de Navidad liso",
+      "categoria": "navidad",
+      "precio": 145000,
+      "foto": "img/establo-de-navidad-liso-1.webp",
+      "fotos": [
+        "img/establo-de-navidad-liso-1.webp",
+        "img/establo-de-navidad-liso-2.webp",
+        "img/establo-de-navidad-liso-3.webp",
+        "img/establo-de-navidad-liso-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "6cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795393505842",
+      "nombre": "Establo de Navidad liso 8cm",
+      "categoria": "navidad",
+      "precio": 260000,
+      "foto": "img/establo-de-navidad-liso-8cm-1.webp",
+      "fotos": [
+        "img/establo-de-navidad-liso-8cm-1.webp",
+        "img/establo-de-navidad-liso-8cm-2.webp",
+        "img/establo-de-navidad-liso-8cm-3.webp",
+        "img/establo-de-navidad-liso-8cm-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795394044686",
+      "nombre": "Papá Noel y Reno - Encantadora Figura Navideña",
+      "categoria": "navidad",
+      "precio": 85000,
+      "foto": "img/papa-noel-y-reno-encantadora-figura-navidena-1.webp",
+      "fotos": [
+        "img/papa-noel-y-reno-encantadora-figura-navidena-1.webp",
+        "img/papa-noel-y-reno-encantadora-figura-navidena-2.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795397961197",
+      "nombre": "Portal de Belén costura 8cm",
+      "categoria": "navidad",
+      "precio": 280000,
+      "foto": "img/portal-de-belen-costura-8cm-1.webp",
+      "fotos": [
+        "img/portal-de-belen-costura-8cm-1.webp",
+        "img/portal-de-belen-costura-8cm-2.webp",
+        "img/portal-de-belen-costura-8cm-3.webp",
+        "img/portal-de-belen-costura-8cm-4.webp",
+        "img/portal-de-belen-costura-8cm-5.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "8cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795398143651",
+      "nombre": "Portal de Belén costura 10cm",
+      "categoria": "navidad",
+      "precio": 375000,
+      "foto": "img/portal-de-belen-costura-10cm-1.webp",
+      "fotos": [
+        "img/portal-de-belen-costura-10cm-1.webp",
+        "img/portal-de-belen-costura-10cm-2.webp",
+        "img/portal-de-belen-costura-10cm-3.webp",
+        "img/portal-de-belen-costura-10cm-4.webp",
+        "img/portal-de-belen-costura-10cm-5.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "10cm",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795398496074",
+      "nombre": "Sagrada Familia en el Corazón",
+      "categoria": "navidad",
+      "precio": 75000,
+      "foto": "img/sagrada-familia-en-el-corazon-1.webp",
+      "fotos": [
+        "img/sagrada-familia-en-el-corazon-1.webp",
+        "img/sagrada-familia-en-el-corazon-2.webp",
+        "img/sagrada-familia-en-el-corazon-3.webp",
+        "img/sagrada-familia-en-el-corazon-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795398864393",
+      "nombre": "Snowflake fidget Christmas tree ornament",
+      "categoria": "navidad",
+      "precio": 20000,
+      "foto": "img/snowflake-fidget-christmas-tree-ornament-1.webp",
+      "fotos": [
+        "img/snowflake-fidget-christmas-tree-ornament-1.webp",
+        "img/snowflake-fidget-christmas-tree-ornament-2.webp",
+        "img/snowflake-fidget-christmas-tree-ornament-3.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795399334524",
+      "nombre": "Tarjeta de kit de capilla de pan de jengibre",
+      "categoria": "",
+      "precio": 22000,
+      "foto": "img/tarjeta-de-kit-de-capilla-de-pan-de-jengibre-1.webp",
+      "fotos": [
+        "img/tarjeta-de-kit-de-capilla-de-pan-de-jengibre-1.webp",
+        "img/tarjeta-de-kit-de-capilla-de-pan-de-jengibre-2.webp",
+        "img/tarjeta-de-kit-de-capilla-de-pan-de-jengibre-3.webp",
+        "img/tarjeta-de-kit-de-capilla-de-pan-de-jengibre-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795399736125",
+      "nombre": "Tarjeta de kit de casa de jengibre",
+      "categoria": "navidad",
+      "precio": 15000,
+      "foto": "img/tarjeta-de-kit-de-casa-de-jengibre-1.webp",
+      "fotos": [
+        "img/tarjeta-de-kit-de-casa-de-jengibre-1.webp",
+        "img/tarjeta-de-kit-de-casa-de-jengibre-2.webp",
+        "img/tarjeta-de-kit-de-casa-de-jengibre-3.webp",
+        "img/tarjeta-de-kit-de-casa-de-jengibre-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795400129015",
+      "nombre": "Tarjeta de kit de casa de jengibre 2",
+      "categoria": "navidad",
+      "precio": 20000,
+      "foto": "img/tarjeta-de-kit-de-casa-de-jengibre-2-1.webp",
+      "fotos": [
+        "img/tarjeta-de-kit-de-casa-de-jengibre-2-1.webp",
+        "img/tarjeta-de-kit-de-casa-de-jengibre-2-2.webp",
+        "img/tarjeta-de-kit-de-casa-de-jengibre-2-3.webp",
+        "img/tarjeta-de-kit-de-casa-de-jengibre-2-4.webp",
+        "img/tarjeta-de-kit-de-casa-de-jengibre-2-5.webp",
+        "img/tarjeta-de-kit-de-casa-de-jengibre-2-6.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795401839679",
+      "nombre": "Tarjeta de kit de mini casa de jengibre",
+      "categoria": "navidad",
+      "precio": 62000,
+      "foto": "img/tarjeta-de-kit-de-mini-casa-de-jengibre-1.webp",
+      "fotos": [
+        "img/tarjeta-de-kit-de-mini-casa-de-jengibre-1.webp",
+        "img/tarjeta-de-kit-de-mini-casa-de-jengibre-2.webp",
+        "img/tarjeta-de-kit-de-mini-casa-de-jengibre-3.webp",
+        "img/tarjeta-de-kit-de-mini-casa-de-jengibre-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795402267330",
+      "nombre": "Tarjeta de trineo de Navidad",
+      "categoria": "navidad",
+      "precio": 16000,
+      "foto": "img/tarjeta-de-trineo-de-navidad-1.webp",
+      "fotos": [
+        "img/tarjeta-de-trineo-de-navidad-1.webp",
+        "img/tarjeta-de-trineo-de-navidad-2.webp",
+        "img/tarjeta-de-trineo-de-navidad-3.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795402555526",
+      "nombre": "Tarjeta Kit de Puesto de Mercado de Pan de Jengibre",
+      "categoria": "navidad",
+      "precio": 22000,
+      "foto": "img/tarjeta-kit-de-puesto-de-mercado-de-pan-de-jengibr-1.webp",
+      "fotos": [
+        "img/tarjeta-kit-de-puesto-de-mercado-de-pan-de-jengibr-1.webp",
+        "img/tarjeta-kit-de-puesto-de-mercado-de-pan-de-jengibr-2.webp",
+        "img/tarjeta-kit-de-puesto-de-mercado-de-pan-de-jengibr-3.webp",
+        "img/tarjeta-kit-de-puesto-de-mercado-de-pan-de-jengibr-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
+    },
+    {
+      "id": "D-1795403299747",
+      "nombre": "Tren de Navidad",
+      "categoria": "navidad",
+      "precio": 200000,
+      "foto": "img/tren-de-navidad-1.webp",
+      "fotos": [
+        "img/tren-de-navidad-1.webp",
+        "img/tren-de-navidad-2.webp",
+        "img/tren-de-navidad-3.webp",
+        "img/tren-de-navidad-4.webp"
+      ],
+      "video": "",
+      "descripcion": "",
+      "medidas": "",
+      "disponible": false,
+      "materiales": [
+        {
+          "nombre": "PLA",
+          "colores": [
+            "Pupura",
+            "verde",
+            "Rojo",
+            "Azul",
+            "beige",
+            "café",
+            "blue luminos",
+            "negro",
+            "madera",
+            "gris",
+            "azul",
+            "amarillo"
+          ]
+        }
+      ],
+      "disponibles": []
     }
   ]
 }
