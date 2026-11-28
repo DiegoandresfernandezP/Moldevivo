@@ -117,6 +117,16 @@
     else if (pedido.items.length < 50) pedido.items.push(it);
     guardarPedido(); actualizarFab();
   }
+  /* Las categorías se comparan sin distinguir mayúsculas ni tildes: "navidad" y "Navidad" son la misma colección. */
+  function norm(s) { return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim(); }
+  function canonizar(lista) {
+    var mapa = {};
+    lista.forEach(function (p) {
+      var k = norm(p.categoria);
+      if (!mapa[k]) mapa[k] = p.categoria.charAt(0).toUpperCase() + p.categoria.slice(1);
+      p.categoria = mapa[k];
+    });
+  }
   /* Enlaces que se pueden compartir: #cat=Navidad abre una colección y #p=id abre un producto. */
   function hashCategoria() { return categoria === 'Todo' ? '' : '#cat=' + encodeURIComponent(categoria); }
   function fijarHash(h0) { try { window.history.replaceState(null, '', window.location.pathname + window.location.search + h0); } catch (e) { /* sin historial */ } }
@@ -124,8 +134,10 @@
     var h0 = window.location.hash || '', mc = /^#cat=(.+)$/.exec(h0), mp = /^#p=([\w-]{1,40})$/.exec(h0), v = '';
     if (mc) {
       try { v = decodeURIComponent(mc[1]); } catch (e) { v = ''; }
-      if (productos.some(function (p) { return p.categoria === v; })) {
-        categoria = v; renderFiltros(); renderGrilla();
+      var hit = null;
+      productos.forEach(function (p) { if (norm(p.categoria) === norm(v)) hit = p.categoria; });
+      if (hit) {
+        categoria = hit; renderFiltros(); renderGrilla();
         var sec = $('#catalogo'); if (sec && sec.scrollIntoView) sec.scrollIntoView();
       }
     } else if (mp && porId[mp[1]]) { abrirProducto(porId[mp[1]]); }
@@ -400,6 +412,7 @@
       var lista = r[1] && Array.isArray(r[1].productos) ? r[1].productos.slice(0, 200) : null;
       if (!lista) { var g = $('#grilla'); vaciar(g); g.appendChild(h('p', { class: 'estado', text: 'No pudimos cargar el catálogo. Escríbenos por WhatsApp y te lo enviamos.' })); return; }
       productos = lista.map(limpiarProducto).filter(Boolean);
+      canonizar(productos);
       productos.forEach(function (p) { porId[p.id] = p; });
       $('#aviso-ejemplo').hidden = !productos.some(function (p) { return p.ejemplo; });
       cargarPedido(); actualizarFab(); renderFiltros(); renderGrilla(); aplicarHash();

@@ -44,6 +44,15 @@
     var min = Math.min.apply(null, ps), max = Math.max.apply(null, ps);
     return (min !== max ? 'Desde ' : '') + COP.format(min);
   }
+  function norm(s) { return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim(); }
+  function canonizar(lista) {
+    var mapa = {};
+    lista.forEach(function (p) {
+      var k = norm(p.categoria);
+      if (!mapa[k]) mapa[k] = p.categoria.charAt(0).toUpperCase() + p.categoria.slice(1);
+      p.categoria = mapa[k];
+    });
+  }
   function fijarHash(v) { try { window.history.replaceState(null, '', window.location.pathname + window.location.search + v); } catch (e) { /* sin historial */ } }
 
   function ficha(p) {
@@ -91,6 +100,7 @@
     ]).then(function (r) {
       var c = r[0] && Array.isArray(r[0].productos) ? r[0].productos.slice(0, 200) : [];
       productos = c.map(limpiar).filter(Boolean);
+      canonizar(productos);
       fecha = texto(r[0] && r[0].actualizado, 10);
       cfg.whatsapp = /^\d{10,15}$/.test(String(r[1] && r[1].whatsapp || '')) ? String(r[1].whatsapp) : null;
       var sel = $('#sel-cat'), cats = [];
@@ -98,7 +108,7 @@
       sel.appendChild(h('option', { value: '', text: 'Todo el catálogo' }));
       cats.forEach(function (c) { sel.appendChild(h('option', { value: c, text: c })); });
       var m = /^#cat=(.+)$/.exec(window.location.hash || ''), v = '';
-      if (m) { try { v = decodeURIComponent(m[1]); } catch (e) { v = ''; } if (cats.indexOf(v) >= 0) sel.value = v; }
+      if (m) { try { v = decodeURIComponent(m[1]); } catch (e) { v = ''; } cats.forEach(function (c) { if (norm(c) === norm(v)) sel.value = c; }); }
       sel.addEventListener('change', function () { fijarHash(sel.value ? '#cat=' + encodeURIComponent(sel.value) : ''); render(); });
       $('#solo-fotos').addEventListener('change', render);
       $('#imprimir').addEventListener('click', function () { window.print(); });
